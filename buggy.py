@@ -2,7 +2,7 @@
 
 import os, sys
 
-def greet_user(name)
+def greet_user(name):
     print("Hello, " + name)
 
 def calculate_area(radius):
