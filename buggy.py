@@ -1,77 +1,39 @@
-# buggy_script.py
-
-import os, sys
+# buggy_script_no_syntax_errors.py
 
 def greet_user(name):
-    print("Hello, " + name)
+    if name == "":
+        print("Hello, Stranger!")  # Should be handled better
+    else:
+        print("Hello, " + name)
 
 def calculate_area(radius):
     area = 3.14 * radius ** 2
     return area
 
 def divide_numbers(a, b):
-    return a / b  # Potential ZeroDivisionError
+    return a / b  # May cause ZeroDivisionError
 
-class Person
+class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
     def say_hi(self):
-    print("Hi, my name is", se# buggy_script.py
+        print("Hi, my name is", self.name)
 
-import os, sys
-
-def greet_user(name)
-    print("Hello, " + name)
-
-def calculate_area(radius):
-    area = 3.14 * radius ** 2
-    return area
-
-def divide_numbers(a, b):
-    return a / b  # Potential ZeroDivisionError
-
-class Person
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def say_hi(self):
-    print("Hi, my name is", self.name)
-
-# Logic error: wrong variable used
 def add_numbers(x, y):
-    result = x - y
+    result = x - y  # Logical error: should be x + y
     return result
 
 if __name__ == "__main__":
-    greet_user("Alice")
+    greet_user("")  # Should probably ask for name if empty
 
-    r = "5"  # Should be a number, not a string
-    print("Area of circle:", calculate_area(r))
+    r = "5"  # Logical bug: should be a number, not a string
+    print("Area of circle:", calculate_area(r))  # Will throw TypeError
 
-    print("Division result:", divide_numbers(10, 0))
+    print("Division result:", divide_numbers(10, 0))  # Runtime error
 
     p = Person("Bob", 30)
     p.say_hi()
 
-    print("Sum is:", add_numbers(10, 5))
-
-# Logic error: wrong variable used
-def add_numbers(x, y):
-    result = x - y
-    return result
-
-if __name__ == "__main__":
-    greet_user("Alice")
-
-    r = "5"  # Should be a number, not a string
-    print("Area of circle:", calculate_area(r))
-
-    print("Division result:", divide_numbers(10, 0))
-
-    p = Person("Bob", 30)
-    p.say_hi()
-
-    print("Sum is:", add_numbers(10, 5))
+    print("Sum is:", add_numbers(10, 5))  # Will return 5 instead of 15
