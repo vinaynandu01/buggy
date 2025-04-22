@@ -46,7 +46,7 @@ def add_numbers(x, y):
     return result
 
 if __name__ == "__main__":
-    greet_user("Alice"
+    greet_user("Alice")
 
     r = "5"  # Should be a number, not a string
     print("Area of circle:", calculate_area(r))
@@ -57,7 +57,6 @@ if __name__ == "__main__":
     p.say_hi()
 
     print("Sum is:", add_numbers(10, 5))
-lf.name)
 
 # Logic error: wrong variable used
 def add_numbers(x, y):
@@ -65,7 +64,7 @@ def add_numbers(x, y):
     return result
 
 if __name__ == "__main__":
-    greet_user("Alice"
+    greet_user("Alice")
 
     r = "5"  # Should be a number, not a string
     print("Area of circle:", calculate_area(r))
